@@ -1,0 +1,61 @@
+@font-face {
+  font-family: AzeretR;
+  src: url(../../fonts/AzeretMono-Regular.ttf);
+}
+@font-face {
+  font-family: AzeretL;
+  src: url(../../fonts/AzeretMono-ExtraLight.ttf);
+}
+@font-face {
+  font-family: Random;
+  src: url(../../fonts/RG-StandardBold.ttf);
+}
+
+.g-container-about {
+  margin-top: 100px;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.first-block {
+  display: flex;
+  padding-right: 13em;
+
+  justify-content: space-between;
+  & p {
+    font-family: AzeretL;
+  }
+}
+
+.second-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  font-size: 11vw;
+  & p {
+    font-family: Random;
+  }
+}
+.third-block {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+  & p {
+    font-family: AzeretL;
+  }
+}
+
+.sentence-about-me {
+  width: 45vw;
+  font-size: 35px;
+  padding-right: 6em;
+}
+
+p {
+  color: #bff102;
+}
+
+h3 {
+  color: #bff102;
+  font-family: AzeretL;
+}

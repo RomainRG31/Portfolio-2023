@@ -1,0 +1,12 @@
+.g-container-projects {
+  padding-left: 5em;
+  padding-right: 5em;
+  margin-top: 100px;
+}
+
+.container-dataProjects {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 300px;
+  padding: 0 5em;
+}
