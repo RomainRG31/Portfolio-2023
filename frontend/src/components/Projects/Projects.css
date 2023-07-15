@@ -1,12 +1,53 @@
+@font-face {
+  font-family: AzeretL;
+  src: url(../../fonts/AzeretMono-ExtraLight.ttf);
+}
+@font-face {
+  font-family: RandomMedium;
+  src: url(../../fonts/RG-StandardMedium.ttf);
+}
+
 .g-container-projects {
   padding-left: 5em;
-  padding-right: 5em;
-  margin-top: 100px;
+  margin-top: 70px;
+  & hr {
+    background-color: #bff102;
+    margin-bottom: 20px;
+    height: 2px;
+    border: none;
+  }
+}
+.order {
+  color: #bff102;
+  font-family: AzeretL;
+  display: inline;
+}
+
+.title {
+  font-size: 180px;
+  font-family: RandomMedium;
+  line-height: 140px;
+  margin-top: 25px;
+}
+
+.btn-p {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 220px;
+  & button {
+    color: #bff102;
+  }
+}
+
+.order-title {
+  display: flex;
+  margin-top: 3em;
 }
 
 .container-dataProjects {
   display: flex;
   justify-content: space-between;
-  margin-top: 300px;
-  padding: 0 5em;
+  margin-top: 200px;
+  padding-left: 5em;
+  padding-right: 2em;
 }

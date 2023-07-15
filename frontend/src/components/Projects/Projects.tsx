@@ -9,9 +9,12 @@ interface IProjectsInfo {
 const projects = (infos: IProjectsInfo) => {
   return (
     <div className="g-container-projects">
-      <div>
-        <span>{infos.order}</span>
-        <p>{infos.title}</p>
+      <hr></hr>
+      <div className="order-title">
+        <span className="order">{infos.order}</span>
+        <p className="title">{infos.title}</p>
+      </div>
+      <div className="btn-p">
         <button>{infos.button}</button>
       </div>
     </div>

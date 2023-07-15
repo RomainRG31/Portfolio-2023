@@ -2,6 +2,7 @@ import Layout from "../components/layout/Layout";
 import About from "../components/About/About";
 import Projects from "../components/Projects/Projects";
 import { dataProjects } from "../utils/dataProjects";
+import Works from "../components/Works/Works";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
             ))}
           </div>
         </div>
+        <Works />
       </Layout>
     </>
   );

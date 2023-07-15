@@ -1,0 +1,26 @@
+@font-face {
+  font-family: RandomMedium;
+  src: url(../../fonts/RG-StandardMedium.ttf);
+}
+
+.g-container-works {
+  display: flex;
+  background-color: #050505;
+  border-radius: 1em;
+  margin-top: 200px;
+  padding: 5em 5em;
+}
+
+.btn-download-works button {
+  color: #bff102;
+}
+
+h2 {
+  color: #bff102;
+  font-family: RandomMedium;
+  font-size: 80px;
+}
+
+.sentence-works {
+  color: #bff102;
+}
