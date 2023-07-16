@@ -1,6 +1,6 @@
 @font-face {
   font-family: RandomSemiB;
-  src: url(../../fonts/RG-StandardSemibold.ttf);
+  src: url(../../fonts/RG-StandardSemibold.ttf) format("truetype");
 }
 
 .g-mail-block {
@@ -10,6 +10,7 @@
 .mail-sentence {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 10em;
   padding: 3em;
   background-color: #bff102;
@@ -18,5 +19,13 @@
     color: #050505;
     font-family: RandomSemiB;
     font-size: 95px;
+  }
+
+  & img {
+    width: 5em;
+    height: 5em;
+    padding-right: 3em;
+    object-fit: cover;
+    image-rendering: optimizeQuality;
   }
 }

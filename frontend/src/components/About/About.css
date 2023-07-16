@@ -1,14 +1,14 @@
 @font-face {
   font-family: AzeretR;
-  src: url(../../fonts/AzeretMono-Regular.ttf);
+  src: url(../../fonts/AzeretMono-Regular.ttf) format("truetype");
 }
 @font-face {
   font-family: AzeretL;
-  src: url(../../fonts/AzeretMono-ExtraLight.ttf);
+  src: url(../../fonts/AzeretMono-ExtraLight.ttf) format("truetype");
 }
 @font-face {
   font-family: Random;
-  src: url(../../fonts/RG-StandardBold.ttf);
+  src: url(../../fonts/RG-StandardBold.ttf) format("truetype");
 }
 
 .g-container-about {
@@ -19,7 +19,7 @@
 
 .first-block {
   display: flex;
-  padding-right: 13em;
+  padding-right: 6em;
 
   justify-content: space-between;
   & p {
@@ -31,7 +31,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
-  font-size: 11vw;
+  font-size: 12.5vw;
   & p {
     font-family: Random;
   }
@@ -46,9 +46,9 @@
 }
 
 .sentence-about-me {
-  width: 45vw;
-  font-size: 35px;
-  padding-right: 6em;
+  width: 50vw;
+  font-size: 30px;
+  padding-right: 2em;
 }
 
 p {

@@ -1,20 +1,26 @@
 @font-face {
   font-family: RandomSemiB;
-  src: url(../../fonts/RG-StandardSemibold.ttf);
+  src: url(../../fonts/RG-StandardSemibold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: AzeretL;
+  src: url(../../fonts/AzeretMono-ExtraLight.ttf) format("truetype");
 }
 
 a:visited {
   color: #bff102;
+  text-decoration: none;
 }
 
 .g-container-footer {
+  font-family: AzeretL;
   display: flex;
   flex-direction: column;
-  height: 48vh;
   background-color: #050505;
   margin-top: 50px;
   justify-content: space-between;
-  padding: 3em 2em 1em 5em;
+  padding: 5em 2em 1em 5em;
 }
 
 .boost p {
@@ -31,26 +37,30 @@ a:visited {
 .copyright {
   display: flex;
   justify-content: space-between;
+  margin-top: 100px;
 }
 
 .social {
   display: flex;
   justify-content: space-evenly;
   font-size: 30px;
+  margin-top: 100px;
 }
 
 .g-container-pages-link {
   width: 25vw;
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  & p {
+  & a {
     border-top: solid 2px #bff102;
     font-size: 15px;
     padding: 1.5em 0;
     text-transform: uppercase;
   }
-  & .footer-contact-link {
-    border-bottom: #bff102 solid 2px;
-  }
+}
+
+.contact-link {
+  border-bottom: solid 2px #bff102;
 }

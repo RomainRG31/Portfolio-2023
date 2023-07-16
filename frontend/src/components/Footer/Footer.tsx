@@ -2,8 +2,8 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const socialNetworkLinkedin = "{ Linkedin }";
-  const socialNetworkGitHub = "{ GitHub }";
+  const socialNetworkLinkedin = "{ LINKEDIN }";
+  const socialNetworkGitHub = "{ GITHUB }";
 
   const urlLinkedin = "https://www.linkedin.com/in/romainrg31/";
   const urlGitHub = "https://github.com/RomainRG31";
@@ -15,10 +15,16 @@ const Footer = () => {
           <p>I Am - Boost</p>
         </div>
         <div className="g-container-pages-link">
-          <Link to={"/#About"}>About</Link>
-          <Link to={"/#Projects"}>Projects</Link>
-          <Link to={"/#Works"}>Works</Link>
-          <Link to={"/#Contact"} className="footer-contact-link">
+          <Link className="about-link" to={"/#About"}>
+            About
+          </Link>
+          <Link className="projects-link" to={"/#Projects"}>
+            Projects
+          </Link>
+          <Link className="works-lik" to={"/#Works"}>
+            Works
+          </Link>
+          <Link className="contact-link" to={"/#Contact"}>
             Contact
           </Link>
         </div>

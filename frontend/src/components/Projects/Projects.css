@@ -1,10 +1,10 @@
 @font-face {
   font-family: AzeretL;
-  src: url(../../fonts/AzeretMono-ExtraLight.ttf);
+  src: url(../../fonts/AzeretMono-ExtraLight.ttf) format("truetype");
 }
 @font-face {
   font-family: RandomMedium;
-  src: url(../../fonts/RG-StandardMedium.ttf);
+  src: url(../../fonts/RG-StandardMedium.ttf) format("truetype");
 }
 
 .g-container-projects {
