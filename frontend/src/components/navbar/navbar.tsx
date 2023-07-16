@@ -4,7 +4,7 @@ import "./navbar.css";
 
 const navbar = () => {
   return (
-    <nav>
+    <nav id="About">
       <span>
         <img src={logo} alt="Logo de Romain ROGER" />
       </span>

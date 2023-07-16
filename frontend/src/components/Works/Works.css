@@ -3,24 +3,68 @@
   src: url(../../fonts/RG-StandardMedium.ttf);
 }
 
-.g-container-works {
-  display: flex;
+.g-container-roadmap {
   background-color: #050505;
-  border-radius: 1em;
+  border-radius: 2em;
   margin-top: 200px;
-  padding: 5em 5em;
+
+  padding: 5em 2em 0 5em;
 }
 
-.btn-download-works button {
-  color: #bff102;
+.g-container-dataWorks {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 80px;
+}
+.g-container-dataStudies {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 80px;
+}
+
+.container-works-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-download-works {
+  & button {
+    color: #bff102;
+    margin-left: 10px;
+  }
+  & img {
+    width: 1.5em;
+    height: 1.5em;
+    object-fit: cover;
+  }
 }
 
 h2 {
   color: #bff102;
   font-family: RandomMedium;
   font-size: 80px;
+  line-height: 70px;
+  margin-bottom: 50px;
+}
+
+.h2-works {
+  width: 22vw;
 }
 
 .sentence-works {
   color: #bff102;
+}
+
+.works-year {
+  margin-bottom: 30px;
+}
+
+.works-block hr {
+  background-color: #bff102;
+  margin-bottom: 10px;
+  height: 2px;
+  border: none;
+  width: 50vw;
 }

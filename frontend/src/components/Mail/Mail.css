@@ -1,0 +1,22 @@
+@font-face {
+  font-family: RandomSemiB;
+  src: url(../../fonts/RG-StandardSemibold.ttf);
+}
+
+.g-mail-block {
+  padding: 0 2em 0 5em;
+}
+
+.mail-sentence {
+  display: flex;
+  align-items: center;
+  margin-top: 10em;
+  padding: 3em;
+  background-color: #bff102;
+  border-radius: 2em;
+  & p {
+    color: #050505;
+    font-family: RandomSemiB;
+    font-size: 95px;
+  }
+}

@@ -1,49 +1,17 @@
-// interface IWorks {}
 import "./Works.css";
-const Works = () => {
+
+interface IWorks {
+  year: string;
+  experiences: string;
+}
+
+const Works = (works: IWorks) => {
   return (
-    <div className="g-container-works">
-      <div className="h2-works">
-        <h2>
-          WORKS
-          <br /> ROADMAP
-        </h2>
-        <div className="sentence-works">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
-          asperiores inventore animi non necessitatibus distinctio adipisci.
-          Harum voluptas dolore ipsa at! Cumque a dolorum rem alias quas libero
-          suscipit assumenda!
-        </div>
-        <div className="sentence-works">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
-          asperiores inventore animi non necessitatibus distinctio adipisci.
-          Harum voluptas dolore ipsa at! Cumque a dolorum rem alias quas libero
-          suscipit assumenda!
-        </div>
-        <div className="sentence-works">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
-          asperiores inventore animi non necessitatibus distinctio adipisci.
-          Harum voluptas dolore ipsa at! Cumque a dolorum rem alias quas libero
-          suscipit assumenda!
-        </div>
-        <div className="sentence-works">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
-          asperiores inventore animi non necessitatibus distinctio adipisci.
-          Harum voluptas dolore ipsa at! Cumque a dolorum rem alias quas libero
-          suscipit assumenda!
-        </div>
-        <div className="sentence-works">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
-          asperiores inventore animi non necessitatibus distinctio adipisci.
-          Harum voluptas dolore ipsa at! Cumque a dolorum rem alias quas libero
-          suscipit assumenda!
-        </div>
-      </div>
-      <div className="btn-download-works">
-        <button>DOWNLOAD</button>
-      </div>
+    <div className="works-block">
+      <hr></hr>
+      <p className="works-year">{works.year}</p>
+      <p>{works.experiences}</p>
     </div>
   );
 };
-
 export default Works;
