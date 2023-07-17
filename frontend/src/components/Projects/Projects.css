@@ -34,9 +34,12 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 220px;
-  & button {
-    color: #bff102;
-  }
+}
+
+.view-projects {
+  color: #bff102;
+  font-size: 20px;
+  font-family: AzeretL;
 }
 
 .order-title {

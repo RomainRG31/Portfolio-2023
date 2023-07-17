@@ -24,7 +24,7 @@ const Footer = () => {
           <Link className="works-lik" to={"/#Works"}>
             Works
           </Link>
-          <Link className="contact-link" to={"/#Contact"}>
+          <Link className="contact-link" to="mailto:romain32.roger@gmail.com">
             Contact
           </Link>
         </div>

@@ -8,6 +8,8 @@ import { dataStudies } from "../utils/dataStudies";
 import Study from "../components/Study/Study";
 import Why from "../components/Why/Why";
 import Mail from "../components/Mail/Mail";
+import { Link } from "react-router-dom";
+import CV from "../downloads/CV-2023.pdf";
 
 const Home = () => {
   return (
@@ -23,7 +25,7 @@ const Home = () => {
               <Projects
                 order={infos.order}
                 title={infos.title}
-                button={infos.button}
+                link={infos.link}
               />
             ))}
           </div>
@@ -44,7 +46,9 @@ const Home = () => {
             </div>
             <div className="btn-download-works">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWklEQVR4nO2ZwU7DMAyGbT8lh5bX4LgBFw4TJw6TeJRp9vtwioF7UFamdSiFceiUJv8nWYrUVMr/N7HdlggAAAAAAICrsook5tKnSGNqjb3LrbnE7+ipNcx5fTKA19QaBgMYO8BwBAQ5wJAEBVXAUAYZfQC1hqEPYPQBhj5A0AcY+gCptw9Q50dz+bTAmxiJL60Caa4Gfk73qvMDLRV1+RiJ3I5NmDIgzUlzj9fU5Z2Wig5PMeZMyBnwU/whAm9oqcRB0MtYkAZ+HT6Inhvw21xaMnFCmDnfjw2oUvyR3NbWIG+5cS5fVEHM7IRcVPXk/2tC1eL/MqEJ8VMmNCX+zIQgNymqS3hVsir8b+7s69sX/jd39vVZ4Z+wZl+fwQDGDjAcAUEOMCRBQRWw1sugOu80yF1R4by7Yh8ghccsBkhfhriLopvrZaMz56eyQ7oSX9YAAAAAAAAVxhdYO03XQzH2qwAAAABJRU5ErkJggg==" />
-              <button>[ DOWNLOAD ]</button>
+              <Link to={CV} className="btn-download" target="_blank" download>
+                [ DOWNLOAD ]
+              </Link>
             </div>
           </div>
           <div className="g-container-dataWorks">

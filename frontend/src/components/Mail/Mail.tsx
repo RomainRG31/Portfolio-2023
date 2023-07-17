@@ -1,4 +1,5 @@
 import "./Mail.css";
+import { Link } from "react-router-dom";
 
 const Mail = () => {
   return (
@@ -9,12 +10,14 @@ const Mail = () => {
           <br />
           One click away.
         </p>
-        <img
-          width="50"
-          height="50"
-          src="https://img.icons8.com/ios/50/new-post--v1.png"
-          alt="new-post--v1"
-        />
+        <Link to="mailto:romain32.roger@gmail.com">
+          <img
+            width="50"
+            height="50"
+            src="https://img.icons8.com/ios/50/new-post--v1.png"
+            alt="new-post--v1"
+          />
+        </Link>
       </div>
     </div>
   );

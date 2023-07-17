@@ -6,7 +6,7 @@ nav {
   display: flex;
   padding: 2em 2em;
   color: #bff102;
-  justify-content: space-between;
+  justify-content: space-evenly;
   & img {
     object-fit: cover;
     height: 3.8em;
@@ -36,14 +36,14 @@ nav {
 }
 
 .btn-contact {
-  border-radius: 0 1em 1em 0;
-}
-.btn-about {
-  border-radius: 1em 0 0 1em;
   border-right: #bdf1023e solid 1px;
+}
+.btn-french {
+  border-radius: 0 1em 1em 0;
 }
 .btn-projects {
   border-right: #bdf1023e solid 1px;
+  border-radius: 1em 0 0 1em;
 }
 .btn-works {
   border-right: #bdf1023e solid 1px;

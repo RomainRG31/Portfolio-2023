@@ -76,3 +76,8 @@ h2 {
   border: none;
   width: 50vw;
 }
+
+.btn-download {
+  color: #bff102;
+  font-family: AzeretL;
+}

@@ -9,7 +9,6 @@ const navbar = () => {
         <img src={logo} alt="Logo de Romain ROGER" />
       </span>
       <ul>
-        <li className="btn-about">ABOUT</li>
         <li className="btn-projects">
           <Link to="/#Projects">PROJECTS</Link>
         </li>
@@ -19,10 +18,8 @@ const navbar = () => {
         <li className="btn-contact">
           <Link to="/#Contact">CONTACT</Link>
         </li>
+        <li className="btn-french">FRENCH</li>
       </ul>
-      <span>
-        <p className="btn-languages">FRENCH</p>
-      </span>
     </nav>
   );
 };

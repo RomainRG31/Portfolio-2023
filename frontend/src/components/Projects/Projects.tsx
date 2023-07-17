@@ -1,9 +1,10 @@
 import "./Projects.css";
+import { Link } from "react-router-dom";
 
 interface IProjectsInfo {
   order: string;
   title: string;
-  button: string;
+  link: string;
 }
 
 const projects = (infos: IProjectsInfo) => {
@@ -15,7 +16,9 @@ const projects = (infos: IProjectsInfo) => {
         <p className="title">{infos.title}</p>
       </div>
       <div className="btn-p">
-        <button>{infos.button}</button>
+        <Link to={infos.link} className="view-projects">
+          [ VIEW PROJECTS ]
+        </Link>
       </div>
     </div>
   );
