@@ -1,4 +1,5 @@
 import "./Projects.css";
+
 import { Link } from "react-router-dom";
 
 interface IProjectsInfo {
@@ -7,16 +8,16 @@ interface IProjectsInfo {
   link: string;
 }
 
-const projects = (infos: IProjectsInfo) => {
+const Projects = ({ order, title, link }: IProjectsInfo) => {
   return (
     <div id="Projects" className="g-container-projects">
-      <hr></hr>
+      <hr />
       <div className="order-title">
-        <span className="order">{infos.order}</span>
-        <p className="title">{infos.title}</p>
+        <span className="order">{order}</span>
+        <p className="title">{title}</p>
       </div>
       <div className="btn-p">
-        <Link to={infos.link} className="view-projects">
+        <Link to={link} className="view-projects">
           [ VIEW PROJECTS ]
         </Link>
       </div>
@@ -24,4 +25,4 @@ const projects = (infos: IProjectsInfo) => {
   );
 };
 
-export default projects;
+export default Projects;

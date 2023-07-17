@@ -9,6 +9,8 @@
 
 .mail-sentence {
   display: flex;
+  white-space: pre-line;
+
   align-items: center;
   justify-content: space-between;
   margin-top: 10em;
@@ -18,7 +20,7 @@
   & p {
     color: #050505;
     font-family: RandomSemiB;
-    font-size: 95px;
+    font-size: 120px;
   }
 
   & img {

@@ -1,18 +1,16 @@
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import logo from "../../assets/img/RR-logo-portfolio.png";
 import "./navbar.css";
+import { LanguageContext } from "../../LanguageContext";
 
-const navbar = () => {
-  const [lang, setLang] = useState("en");
-
-  const handleTranslateClick = () => {
-    if (lang === "en") {
-      setLang("fr");
-    } else {
-      setLang("en");
-    }
+const Navbar: React.FC = () => {
+  const { toggleLanguage } = useContext(LanguageContext);
+  const { language } = useContext(LanguageContext);
+  const handleLanguageToggle = () => {
+    toggleLanguage();
   };
+
   return (
     <nav id="About">
       <span>
@@ -20,20 +18,22 @@ const navbar = () => {
       </span>
       <ul>
         <li className="btn-projects">
-          <Link to="/#Projects">{lang === "en" ? "PROJECTS" : "PROJETS"}</Link>
+          <Link to="/#Projects">
+            {language === "en" ? "PROJECTS" : "PROJETS"}
+          </Link>
         </li>
         <li className="btn-works">
-          <Link to="/#Works">{lang === "en" ? "WORKS" : "TRAVAIL"}</Link>
+          <Link to="/#Works">{language === "en" ? "WORKS" : "TRAVAIL"}</Link>
         </li>
         <li className="btn-contact">
           <Link to="/#Contact">CONTACT</Link>
         </li>
-        <button onClick={handleTranslateClick}>
-          {lang === "en" ? "FRENCH" : "ANGLAIS"}
+        <button onClick={handleLanguageToggle}>
+          {language === "en" ? "FRENCH" : "ANGLAIS"}
         </button>
       </ul>
     </nav>
   );
 };
 
-export default navbar;
+export default Navbar;

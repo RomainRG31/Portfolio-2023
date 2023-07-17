@@ -10,19 +10,24 @@ import Why from "../components/Why/Why";
 import Mail from "../components/Mail/Mail";
 import { Link } from "react-router-dom";
 import CV from "../downloads/CV-2023.pdf";
+import { LanguageContext } from "../LanguageContext";
+import { useContext } from "react";
 
 const Home = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <>
       <Layout>
         <About />
         <div id="Projects" className="container-dataProjects">
           <div className="title-mini">
-            <h3>PROJECTS</h3>
+            <h3>{language === "en" ? "PROJECTS" : "PROJETS"}</h3>
           </div>
           <div className="g-container-dataProjects">
             {dataProjects.map((infos) => (
               <Projects
+                key={infos.title}
                 order={infos.order}
                 title={infos.title}
                 link={infos.link}

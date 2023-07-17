@@ -24,6 +24,7 @@
   justify-content: space-between;
   & p {
     font-family: AzeretL;
+    white-space: pre-line;
   }
 }
 
@@ -31,7 +32,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
-  font-size: 12.5vw;
+  font-size: 12vw;
   & p {
     font-family: Random;
   }

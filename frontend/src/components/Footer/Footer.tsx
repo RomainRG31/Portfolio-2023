@@ -1,5 +1,7 @@
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { LanguageContext } from "../../LanguageContext";
 
 const Footer = () => {
   const socialNetworkLinkedin = "{ LINKEDIN }";
@@ -8,21 +10,23 @@ const Footer = () => {
   const urlLinkedin = "https://www.linkedin.com/in/romainrg31/";
   const urlGitHub = "https://github.com/RomainRG31";
 
+  const { language } = useContext(LanguageContext);
+
   return (
     <div className="g-container-footer">
       <div className="boost-block">
         <div className="boost">
-          <p>I Am - Boost</p>
+          <p> {language === "en" ? "I Am - Boost" : "Je Suis - Boosté"} </p>
         </div>
         <div className="g-container-pages-link">
           <Link className="about-link" to={"/#About"}>
-            About
+            {language === "en" ? "About" : "À Propos"}
           </Link>
           <Link className="projects-link" to={"/#Projects"}>
-            Projects
+            {language === "en" ? "Projects" : "Projets"}
           </Link>
           <Link className="works-lik" to={"/#Works"}>
-            Works
+            {language === "en" ? "Works" : "Travail"}
           </Link>
           <Link className="contact-link" to="mailto:romain32.roger@gmail.com">
             Contact
@@ -34,8 +38,18 @@ const Footer = () => {
         <a href={urlGitHub}>{socialNetworkGitHub}</a>
       </div>
       <div className="copyright">
-        <p>©All Rights Reserved.</p>
-        <p>Copyright © 2023 </p>
+        <p>
+          {" "}
+          {language === "en"
+            ? "©All Rights Reserved."
+            : "©Tous droits réservés."}{" "}
+        </p>
+        <p>
+          {" "}
+          {language === "en"
+            ? "Copyright © 2023"
+            : "Droits d'auteur © 2023 "}{" "}
+        </p>
       </div>
     </div>
   );
