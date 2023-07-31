@@ -1,17 +1,28 @@
 import Layout from "../components/layout/Layout";
 import About from "../components/About/About";
 import Projects from "../components/Projects/Projects";
-import { dataProjects, translations } from "../utils/dataProjects";
+import {
+  dataProjects,
+  translations as projectTranslations,
+} from "../utils/dataProjects";
+
+import {
+  dataWorks,
+  translations as worksTranslations,
+} from "../utils/dataWorks";
+
+import {
+  dataStudies,
+  translations as studiesTranslations,
+} from "../utils/dataStudies";
 import Works from "../components/Works/Works";
-import { dataWorks } from "../utils/dataWorks";
-import { dataStudies } from "../utils/dataStudies";
-import Study from "../components/Study/Study";
 import Why from "../components/Why/Why";
 import Mail from "../components/Mail/Mail";
 import { Link } from "react-router-dom";
 import CV from "../downloads/CV-2023.pdf";
 import { LanguageContext } from "../LanguageContext";
 import { useContext } from "react";
+import Studies from "../components/Study/Study";
 
 const Home = () => {
   const { language } = useContext(LanguageContext);
@@ -29,7 +40,7 @@ const Home = () => {
               <Projects
                 key={index}
                 order={infos.order}
-                title={translations[language][infos.title]} // Utilisez la traduction correspondante pour le titre
+                title={projectTranslations[language][infos.title]}
                 link={infos.link}
               />
             ))}
@@ -39,14 +50,12 @@ const Home = () => {
           <div className="container-works-header">
             <div className="h2-works">
               <h2>
-                Works
-                <br /> roadmap
+                {language === "en" ? "Works \n roadmap" : "Feuille de \n route"}
               </h2>
               <div className="sentence-works">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
-                asperiores inventore animi non necessitatibus distinctio
-                adipisci. Harum voluptas dolore ipsa at! Cumque a dolorum rem
-                alias quas libero suscipit assumenda!
+                {language === "en"
+                  ? "With a diversified professional experience and demonstrated success in different fields, my professional background highlights a passion for excellence and a proven ability to meet challenges with creativity and determination."
+                  : "Fort d'une expérience professionnelle diversifiée et de succès démontrés dans différents domaines, mon parcours professionnel met en avant une passion pour l'excellence et une capacité éprouvée à relever les défis avec créativité et détermination."}
               </div>
             </div>
             <div className="btn-download-works">
@@ -57,13 +66,39 @@ const Home = () => {
             </div>
           </div>
           <div className="g-container-dataWorks">
-            {dataWorks.map((works) => (
-              <Works year={works.year} experiences={works.experiences} />
+            <h2>{language === "en" ? "Works" : "Travail"}</h2>
+            {dataWorks.map((works, index) => (
+              <div
+                key={works.year}
+                style={{
+                  paddingRight: index === 0 ? "10%" : `${(index + 1) * 15}%`,
+                }}
+              >
+                <Works
+                  key={index}
+                  year={works.year}
+                  experiences={worksTranslations[language][works.experiences]}
+                  index={0}
+                />
+              </div>
             ))}
           </div>
           <div className="g-container-dataStudies">
-            {dataStudies.map((study) => (
-              <Study year={study.year} studies={study.study} />
+            <h2>{language === "en" ? "Studies" : "Études"}</h2>
+            {dataStudies.map((studies, index) => (
+              <div
+                key={studies.year}
+                style={{
+                  paddingLeft: index === 0 ? "10%" : `${(index + 1) * 15}%`,
+                }}
+              >
+                <Studies
+                  key={index}
+                  year={studies.year}
+                  study={studiesTranslations[language][studies.study]}
+                  index={0}
+                />
+              </div>
             ))}
           </div>
         </div>

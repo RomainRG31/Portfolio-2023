@@ -1,13 +1,20 @@
 .g-container-dataStudies {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: start;
+  gap: 2em;
+  margin-top: 2em;
+  & h2 {
+    padding: 1em 0.5em;
+  }
 }
 
-.study-block hr {
-  background-color: #bff102;
-  margin-bottom: 10px;
-  height: 2px;
-  border: none;
-  width: 50vw;
+.studies-block {
+  border-top: #bff102 2px solid;
+  width: 21em;
+}
+
+.studies-year {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

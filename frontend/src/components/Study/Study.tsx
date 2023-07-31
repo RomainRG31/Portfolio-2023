@@ -1,17 +1,19 @@
 import "./Study.css";
 
-interface IStudy {
+interface IStudies {
   year: string;
-  studies: string;
+  study: string;
 }
 
-const Study = (study: IStudy) => {
+const Studies = (props: IStudies & { index: number }) => {
+  const paddingLeft = props.index > 0 ? `${(props.index + 1) * 5}em` : "0";
+
   return (
-    <div className="study-block">
-      <hr></hr>
-      <p className="study-year">{study.year}</p>
-      <p>{study.studies}</p>
+    <div className="studies-block" style={{ paddingLeft }}>
+      <p className="studies-year">{props.year}</p>
+      <p>{props.study}</p>
     </div>
   );
 };
-export default Study;
+
+export default Studies;
