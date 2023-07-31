@@ -1,28 +1,21 @@
-import Layout from "../components/layout/Layout";
-import About from "../components/About/About";
-import Projects from "../components/Projects/Projects";
+import { Layout, About, Projects, Works, Why, Mail, Studies } from "../Import";
 import {
   dataProjects,
   translations as projectTranslations,
 } from "../utils/dataProjects";
-
 import {
   dataWorks,
   translations as worksTranslations,
 } from "../utils/dataWorks";
-
 import {
   dataStudies,
   translations as studiesTranslations,
 } from "../utils/dataStudies";
-import Works from "../components/Works/Works";
-import Why from "../components/Why/Why";
-import Mail from "../components/Mail/Mail";
+import { dataWhy, translations as whyTranslations } from "../utils/dataWhy";
 import { Link } from "react-router-dom";
 import CV from "../downloads/CV-2023.pdf";
 import { LanguageContext } from "../LanguageContext";
 import { useContext } from "react";
-import Studies from "../components/Study/Study";
 
 const Home = () => {
   const { language } = useContext(LanguageContext);
@@ -61,7 +54,7 @@ const Home = () => {
             <div className="btn-download-works">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWklEQVR4nO2ZwU7DMAyGbT8lh5bX4LgBFw4TJw6TeJRp9vtwioF7UFamdSiFceiUJv8nWYrUVMr/N7HdlggAAAAAAICrsook5tKnSGNqjb3LrbnE7+ipNcx5fTKA19QaBgMYO8BwBAQ5wJAEBVXAUAYZfQC1hqEPYPQBhj5A0AcY+gCptw9Q50dz+bTAmxiJL60Caa4Gfk73qvMDLRV1+RiJ3I5NmDIgzUlzj9fU5Z2Wig5PMeZMyBnwU/whAm9oqcRB0MtYkAZ+HT6Inhvw21xaMnFCmDnfjw2oUvyR3NbWIG+5cS5fVEHM7IRcVPXk/2tC1eL/MqEJ8VMmNCX+zIQgNymqS3hVsir8b+7s69sX/jd39vVZ4Z+wZl+fwQDGDjAcAUEOMCRBQRWw1sugOu80yF1R4by7Yh8ghccsBkhfhriLopvrZaMz56eyQ7oSX9YAAAAAAAAVxhdYO03XQzH2qwAAAABJRU5ErkJggg==" />
               <Link to={CV} className="btn-download" target="_blank" download>
-                [ DOWNLOAD ]
+                {language === "en" ? "[ DOWNLOAD ]" : "[ TELECHARGER ]"}
               </Link>
             </div>
           </div>
@@ -102,7 +95,16 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <Why />
+        <div className="g-container-why">
+          {dataWhy.map((data, index) => (
+            <Why
+              key={index}
+              order={data.order}
+              sentence={whyTranslations[language][data.sentence]}
+              description={whyTranslations[language][data.description]}
+            />
+          ))}
+        </div>
         <Mail />
       </Layout>
     </>

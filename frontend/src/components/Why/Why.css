@@ -7,18 +7,29 @@
   display: flex;
   flex-direction: column;
   align-items: end;
+  padding-right: 2em;
   margin-top: 10em;
+}
+
+.g-container-whyComponent {
+  width: 50%;
 }
 .container-content {
   display: flex;
   align-items: center;
+  cursor: pointer;
   margin-bottom: 2em;
   border-bottom: solid 2px #bff102;
   justify-content: space-between;
-  width: 50%;
-  margin-right: 2em;
   font-family: AzeretL;
   & p {
     margin-bottom: 5px;
   }
+}
+
+.dropdownContent {
+  font-family: AzeretL;
+  font-size: 1.5em;
+  padding-right: 2em;
+  margin-bottom: 2em;
 }

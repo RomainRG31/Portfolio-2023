@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import "./Projects.css";
 
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../../LanguageContext";
 
 interface IProjectsInfo {
   order: string;
@@ -9,6 +11,7 @@ interface IProjectsInfo {
 }
 
 const Projects = ({ order, title, link }: IProjectsInfo) => {
+  const { language } = useContext(LanguageContext);
   return (
     <div id="Projects" className="g-container-projects">
       <hr />
@@ -18,7 +21,7 @@ const Projects = ({ order, title, link }: IProjectsInfo) => {
       </div>
       <div className="btn-p">
         <Link to={link} className="view-projects">
-          [ VIEW PROJECTS ]
+          {language === "en" ? "[ VIEW PROJECTS ]" : "[ VOIR PROJETS ]"}
         </Link>
       </div>
     </div>
