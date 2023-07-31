@@ -25,6 +25,7 @@
 .g-container-dataStudies {
   display: flex;
   font-family: AzeretL;
+  padding-bottom: 5em;
   flex-direction: column;
   align-items: end;
   margin-top: 80px;

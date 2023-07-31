@@ -1,7 +1,7 @@
 import Layout from "../components/layout/Layout";
 import About from "../components/About/About";
 import Projects from "../components/Projects/Projects";
-import { dataProjects } from "../utils/dataProjects";
+import { dataProjects, translations } from "../utils/dataProjects";
 import Works from "../components/Works/Works";
 import { dataWorks } from "../utils/dataWorks";
 import { dataStudies } from "../utils/dataStudies";
@@ -25,11 +25,11 @@ const Home = () => {
             <h3>{language === "en" ? "PROJECTS" : "PROJETS"}</h3>
           </div>
           <div className="g-container-dataProjects">
-            {dataProjects.map((infos) => (
+            {dataProjects.map((infos, index) => (
               <Projects
-                key={infos.title}
+                key={index}
                 order={infos.order}
-                title={infos.title}
+                title={translations[language][infos.title]} // Utilisez la traduction correspondante pour le titre
                 link={infos.link}
               />
             ))}
