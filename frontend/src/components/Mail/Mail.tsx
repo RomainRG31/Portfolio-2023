@@ -2,13 +2,58 @@ import "./Mail.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { LanguageContext } from "../../LanguageContext";
+import { useEffect, useRef } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 const Mail = () => {
   const { language } = useContext(LanguageContext);
+  const worksRef = useRef(null);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      const [entry] = entries;
+      if (entry.isIntersecting) {
+        controls.start("visible");
+      } else {
+        controls.start("hidden");
+      }
+    };
+
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (worksRef.current) {
+      observer.observe(worksRef.current);
+    }
+
+    return () => {
+      if (worksRef.current) {
+        observer.unobserve(worksRef.current);
+      }
+    };
+  }, [controls]);
+
+  const containerWorksVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 },
+  };
 
   return (
-    <div className="g-mail-block">
-      <div id="Contact" className="mail-sentence">
+    <motion.div
+      ref={worksRef}
+      animate={controls}
+      variants={containerWorksVariants}
+      initial="hidden"
+      className="g-mail-block"
+    >
+      <div className="mail-sentence">
         <p>
           {language === "en"
             ? "Let's Get started with me. \n One click away."
@@ -23,7 +68,7 @@ const Mail = () => {
           />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

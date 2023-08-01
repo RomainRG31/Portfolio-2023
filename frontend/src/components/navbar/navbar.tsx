@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
       initial="hidden"
       animate="visible"
     >
-      <Link to="/#navbar-back">
+      <Link to="/#Home">
         <img src={logo} alt="Logo de Romain ROGER" />
       </Link>
       <ul>

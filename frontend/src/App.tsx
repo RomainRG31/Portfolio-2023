@@ -1,13 +1,17 @@
-import "./App.css";
-import { useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
-import Home from "./page/Home.tsx";
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Home from "./page/Home";
+
 const App = () => {
   const { pathname, hash, key } = useLocation();
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     if (hash === "") {
-      window.scrollTo(0, 0);
+      scrollToTop();
     } else {
       setTimeout(() => {
         const id = hash.replace("#", "");
@@ -18,6 +22,7 @@ const App = () => {
       }, 0);
     }
   }, [pathname, hash, key]);
+
   return (
     <>
       <Routes>
