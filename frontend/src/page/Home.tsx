@@ -15,17 +15,51 @@ import { dataWhy, translations as whyTranslations } from "../utils/dataWhy";
 import { Link } from "react-router-dom";
 import CV from "../downloads/CV-2023.pdf";
 import { LanguageContext } from "../LanguageContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 const Home = () => {
   const faq = "{/faq/]";
   const { language } = useContext(LanguageContext);
+  const controls = useAnimation();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleScroll = async () => {
+    const scrollThreshold = window.innerHeight * 0.55;
+    const scrollTop = window.scrollY;
+    if (scrollTop >= scrollThreshold) {
+      // If the scroll position is in the middle of the page, start the animation
+      await controls.start("visible");
+    } else {
+      // If the scroll position is above the middle of the page, reset its state to hidden
+      await controls.start("hidden");
+    }
+  };
+
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
+  const containerDataProjectsVariants = {
+    hidden: { x: -3000 },
+    visible: { x: 0 },
+    transition: { duration: 0.8, ease: "easeinout" },
+  };
 
   return (
-    <>
+    <div>
       <Layout>
         <About />
-        <div id="Projects" className="container-dataProjects">
+        <motion.div
+          id="Projects"
+          className="container-dataProjects"
+          variants={containerDataProjectsVariants}
+          initial="hidden"
+          animate={controls}
+        >
           <div className="title-mini">
             <h3>{language === "en" ? "PROJECTS" : "PROJETS"}</h3>
           </div>
@@ -39,7 +73,7 @@ const Home = () => {
               />
             ))}
           </div>
-        </div>
+        </motion.div>
         <div id="Works" className="g-container-roadmap">
           <div className="container-works-header">
             <div className="h2-works">
@@ -111,7 +145,7 @@ const Home = () => {
         </div>
         <Mail />
       </Layout>
-    </>
+    </div>
   );
 };
 

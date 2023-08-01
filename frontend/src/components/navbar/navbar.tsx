@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/RR-logo-portfolio.png";
+import { motion } from "framer-motion"; // Import motion from Framer Motion
 import "./navbar.css";
 import { LanguageContext } from "../../LanguageContext";
 
@@ -11,9 +12,19 @@ const Navbar: React.FC = () => {
     toggleLanguage();
   };
 
+  const navVariants = {
+    hidden: { y: -100 },
+    visible: { y: 0 },
+  };
+
   return (
-    <nav id="About">
-      <Link to="/#About">
+    <motion.nav
+      className="navbar"
+      variants={navVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <Link to="/#navbar-back">
         <img src={logo} alt="Logo de Romain ROGER" />
       </Link>
       <ul>
@@ -30,7 +41,7 @@ const Navbar: React.FC = () => {
           {language === "en" ? "FRENCH" : "ANGLAIS"}
         </button>
       </ul>
-    </nav>
+    </motion.nav>
   );
 };
 

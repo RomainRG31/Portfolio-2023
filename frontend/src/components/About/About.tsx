@@ -1,12 +1,30 @@
 import "./About.css";
 import { useContext } from "react";
+import { motion } from "framer-motion";
 import { LanguageContext } from "../../LanguageContext";
+
 const About = () => {
   const first_lastName = "{Romain ROGER}";
   const { language } = useContext(LanguageContext);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.8 } },
+  };
+
+  const elementVariants = {
+    hidden: { x: -50, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+  };
+
   return (
-    <div className="g-container-about">
-      <div className="first-block">
+    <motion.div
+      className="g-container-about"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div className="first-block" variants={elementVariants}>
         <p>
           {language === "en"
             ? "Web developer from the south of FRANCE, Toulouse. \n Passionate and motivate to learn more and more."
@@ -17,12 +35,12 @@ const About = () => {
             ? "Knowledge is of no value unless \n you put it into practice."
             : "La connaissance n'a de valeur \n que si vous la mettez en pratique."}
         </p>
-      </div>
-      <div className="second-block">
+      </motion.div>
+      <motion.div className="second-block" variants={elementVariants}>
         <p>{language === "en" ? "Portfolio 2023 of*" : "Portfolio 2023 de*"}</p>
         <p>{first_lastName}</p>
-      </div>
-      <div className="third-block">
+      </motion.div>
+      <motion.div className="third-block" variants={elementVariants}>
         <div className="title-mini">
           <h3>{language === "en" ? "ABOUT ME" : "À PROPOS"}</h3>
         </div>
@@ -33,8 +51,8 @@ const About = () => {
               : "Après avoir passé plus de 6 ans dans le secteur du nettoyage industriel, j'ai souhaité me reconvertir dans le milieu informatique en tant que développeur web. Passionné par ce domaine, je cherche continuellement à m'améliorer en solidifiant mes bases et en voulant acquérir de nouvelles compétences, c'est pourquoi je suis à la recherche d'une entreprise pour septembre 2023 dans le cadre d'une alternance au rythme de 3 semaines d'entreprise / 1 semaine d'école pour une durée de 1 an."}
           </p>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
