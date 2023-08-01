@@ -80,11 +80,20 @@ h3 {
     }
   }
   .second-block {
-    justify-content: center;
+    text-align: center;
     font-size: 25vw;
   }
 
+  .third-block {
+    justify-content: center;
+    margin-top: 30px;
+    gap: 2em;
+  }
   .sentence-about-me {
+    font-size: 15px;
+  }
+
+  h3 {
     font-size: 15px;
   }
 }

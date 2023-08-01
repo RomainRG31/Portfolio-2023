@@ -55,10 +55,23 @@
 
   .g-container-whyComponent {
     width: 100%;
-    font-size: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     & img {
       width: 25px;
       height: 25px;
+      margin-bottom: 1em;
+    }
+  }
+
+  .container-content {
+    width: 85%;
+    height: 7em;
+    flex-direction: column;
+    & p {
+      text-align: center;
     }
   }
 
@@ -71,6 +84,13 @@
     margin-top: 90px;
     & p {
       font-size: 70px;
+    }
+  }
+
+  .dropdownContent {
+    padding: 0 1em;
+    & p {
+      text-align: center;
     }
   }
 }
