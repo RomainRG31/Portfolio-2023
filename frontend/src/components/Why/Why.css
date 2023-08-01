@@ -3,6 +3,11 @@
   src: url(../../fonts/AzeretMono-ExtraLight.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: RG;
+  src: url(../../fonts/AzeretMono-Regular.ttf) format("truetype");
+}
+
 .g-container-why {
   display: flex;
   flex-direction: column;
@@ -32,4 +37,40 @@
   font-size: 1.5em;
   padding-right: 2em;
   margin-bottom: 2em;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  & p {
+    font-family: RG;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .faq-container p {
+    font-size: 25px;
+  }
+
+  .g-container-whyComponent {
+    width: 100%;
+    font-size: 10px;
+    & img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .g-container-why {
+    padding: 0;
+    margin-top: 90px;
+  }
+
+  .faq-container {
+    margin-top: 90px;
+    & p {
+      font-size: 70px;
+    }
+  }
 }

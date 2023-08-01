@@ -65,3 +65,25 @@ span {
   display: flex;
   align-items: center;
 }
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-open ul {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar:not(.menu-open) ul {
+    display: none;
+  }
+
+  nav {
+    margin-top: 2em;
+  }
+}

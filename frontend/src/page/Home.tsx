@@ -54,9 +54,8 @@ const Home = () => {
   }, [controls]);
 
   const containerWorksVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 },
   };
 
   return (
@@ -81,13 +80,7 @@ const Home = () => {
         </div>
         <div id="Works"></div>
         <div className="g-container-roadmap">
-          <motion.div
-            ref={worksRef}
-            animate={controls}
-            variants={containerWorksVariants}
-            initial="hidden"
-            className="container-works-header"
-          >
+          <div className="container-works-header">
             <div className="h2-works">
               <h2>
                 {language === "en" ? "Works \n roadmap" : "Feuille de \n route"}
@@ -98,19 +91,13 @@ const Home = () => {
                   : "Fort d'une expérience professionnelle diversifiée et de succès démontrés dans différents domaines, mon parcours professionnel met en avant une passion pour l'excellence et une capacité éprouvée à relever les défis avec créativité et détermination."}
               </div>
             </div>
-            <motion.div
-              ref={worksRef}
-              animate={controls}
-              variants={containerWorksVariants}
-              initial="hidden"
-              className="btn-download-works"
-            >
+            <div className="btn-download-works">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWklEQVR4nO2ZwU7DMAyGbT8lh5bX4LgBFw4TJw6TeJRp9vtwioF7UFamdSiFceiUJv8nWYrUVMr/N7HdlggAAAAAAICrsook5tKnSGNqjb3LrbnE7+ipNcx5fTKA19QaBgMYO8BwBAQ5wJAEBVXAUAYZfQC1hqEPYPQBhj5A0AcY+gCptw9Q50dz+bTAmxiJL60Caa4Gfk73qvMDLRV1+RiJ3I5NmDIgzUlzj9fU5Z2Wig5PMeZMyBnwU/whAm9oqcRB0MtYkAZ+HT6Inhvw21xaMnFCmDnfjw2oUvyR3NbWIG+5cS5fVEHM7IRcVPXk/2tC1eL/MqEJ8VMmNCX+zIQgNymqS3hVsir8b+7s69sX/jd39vVZ4Z+wZl+fwQDGDjAcAUEOMCRBQRWw1sugOu80yF1R4by7Yh8ghccsBkhfhriLopvrZaMz56eyQ7oSX9YAAAAAAAAVxhdYO03XQzH2qwAAAABJRU5ErkJggg==" />
               <Link to={CV} className="btn-download" target="_blank" download>
                 {language === "en" ? "[ DOWNLOAD ]" : "[ TELECHARGER ]"}
               </Link>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
           <div className="g-container-dataWorks">
             <h2>{language === "en" ? "Works" : "Travail"}</h2>
             {dataWorks.map((works, index) => (

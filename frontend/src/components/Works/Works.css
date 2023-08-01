@@ -87,3 +87,39 @@ h2 {
   margin-top: 4px;
   margin-left: 4px;
 }
+
+@media screen and (max-width: 767px) {
+  .works-block {
+    width: 100%;
+    padding: 0;
+  }
+
+  .g-container-roadmap {
+    padding: 0;
+    & h2 {
+      text-align: center;
+    }
+  }
+
+  .g-container-dataStudies {
+    align-items: normal;
+  }
+
+  .h2-works {
+    width: 100%;
+  }
+
+  .sentence-works {
+    text-align: center;
+  }
+
+  .btn-download-works {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .container-works-header {
+    flex-direction: column-reverse;
+    padding-top: 30px;
+  }
+}
