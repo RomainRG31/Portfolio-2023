@@ -18,6 +18,7 @@ import { LanguageContext } from "../LanguageContext";
 import { useContext } from "react";
 
 const Home = () => {
+  const faq = "{/faq/]";
   const { language } = useContext(LanguageContext);
 
   return (
@@ -94,6 +95,9 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="faq-container">
+          <p>{faq}</p>
         </div>
         <div className="g-container-why">
           {dataWhy.map((data, index) => (

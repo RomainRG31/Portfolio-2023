@@ -13,21 +13,19 @@ const Navbar: React.FC = () => {
 
   return (
     <nav id="About">
-      <span>
+      <Link to="/#About">
         <img src={logo} alt="Logo de Romain ROGER" />
-      </span>
+      </Link>
       <ul>
-        <li className="btn-projects">
-          <Link to="/#Projects">
-            {language === "en" ? "PROJECTS" : "PROJETS"}
-          </Link>
-        </li>
-        <li className="btn-works">
-          <Link to="/#Works">{language === "en" ? "WORKS" : "TRAVAIL"}</Link>
-        </li>
-        <li className="btn-contact">
-          <Link to="/#Contact">CONTACT</Link>
-        </li>
+        <Link className="btn-projects" to="/#Projects">
+          <li>{language === "en" ? "PROJECTS" : "PROJETS"}</li>
+        </Link>
+        <Link className="btn-works" to="/#Works">
+          <li>{language === "en" ? "WORKS" : "TRAVAIL"}</li>
+        </Link>
+        <Link className="btn-contact" to="/#Contact">
+          <li>CONTACT</li>
+        </Link>
         <button onClick={handleLanguageToggle}>
           {language === "en" ? "FRENCH" : "ANGLAIS"}
         </button>
