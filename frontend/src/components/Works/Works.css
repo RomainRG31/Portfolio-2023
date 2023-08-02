@@ -25,14 +25,6 @@
     padding-right: 1em;
   }
 }
-.g-container-dataStudies {
-  display: flex;
-  font-family: AzeretL;
-  padding-bottom: 5em;
-  flex-direction: column;
-  align-items: end;
-  margin-top: 80px;
-}
 
 .container-works-header {
   display: flex;
@@ -93,8 +85,15 @@ h2 {
     width: 100%;
   }
 
-  .works-block-reset-padding {
-    padding-right: 0;
+  .g-container-dataWorks {
+    align-items: normal;
+    & div {
+      padding: 0 !important;
+      align-items: flex-start;
+    }
+    & h2 {
+      padding: 0;
+    }
   }
 
   .g-container-roadmap {
@@ -103,10 +102,6 @@ h2 {
     & h2 {
       text-align: center;
     }
-  }
-
-  .g-container-dataStudies {
-    align-items: normal;
   }
 
   .h2-works {

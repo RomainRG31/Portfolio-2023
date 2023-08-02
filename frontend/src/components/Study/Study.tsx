@@ -7,10 +7,11 @@ interface IStudies {
 }
 
 const Studies = (props: IStudies & { index: number }) => {
-  const paddingLeft = props.index > 0 ? `${(props.index + 1) * 5}em` : "0";
-
+  const { year, study, index } = props;
+  const paddingLeft = index > 0 ? `${(index + 1) * 5}em` : "0";
   const worksRef = useRef(null);
   const controls = useAnimation();
+
   useEffect(() => {
     const handleIntersection = (entries) => {
       const [entry] = entries;
@@ -55,8 +56,8 @@ const Studies = (props: IStudies & { index: number }) => {
       className="studies-block"
       style={{ paddingLeft }}
     >
-      <p className="studies-year">{props.year}</p>
-      <p>{props.study}</p>
+      <p className="studies-year">{year}</p>
+      <p>{study}</p>
     </motion.div>
   );
 };

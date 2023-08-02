@@ -50,7 +50,7 @@ const Works = (props: IWorks & { index: number }) => {
 
   return (
     <motion.div
-      className={`works-block ${index > 0 ? "works-block-reset-padding" : ""}`}
+      className="works-block"
       style={{ paddingRight }}
       ref={worksRef}
       animate={controls}

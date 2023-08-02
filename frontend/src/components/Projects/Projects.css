@@ -8,14 +8,20 @@
 }
 
 .g-container-projects {
-  padding-left: 5em;
   margin-top: 70px;
+  width: 60%;
   & hr {
     background-color: #bff102;
     margin-bottom: 20px;
     height: 2px;
     border: none;
   }
+}
+
+.g-container-dataProjects {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 .order {
   color: #bff102;
@@ -44,7 +50,14 @@
 
 .order-title {
   display: flex;
+  flex-direction: column;
   margin-top: 3em;
+}
+
+.container-order {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container-dataProjects {
@@ -75,6 +88,7 @@
   }
 
   .g-container-projects {
-    padding: 1em;
+    padding: 0;
+    width: 100%;
   }
 }

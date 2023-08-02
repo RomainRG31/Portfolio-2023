@@ -85,6 +85,10 @@ a:visited {
     margin-top: 30px;
     & a {
       margin-top: 20px;
+      font-size: 22px;
+    }
+    & a:visited {
+      color: #bff102;
     }
   }
   .copyright {
@@ -100,6 +104,9 @@ a:visited {
     margin-top: 50px;
     & a {
       font-size: 10px;
+    }
+    & a:visited {
+      color: #bff102;
     }
   }
   .g-container-footer {

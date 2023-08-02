@@ -1,7 +1,9 @@
 .g-container-dataStudies {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  font-family: AzeretL;
+  padding-bottom: 5em;
+  margin-top: 80px;
   gap: 2em;
   margin-top: 2em;
   & h2 {
@@ -22,5 +24,20 @@
 @media screen and (max-width: 767px) {
   .studies-block {
     width: 100%;
+  }
+
+  .g-container-dataStudies {
+    align-items: normal;
+    & div {
+      padding: 0 !important;
+      align-items: flex-start;
+    }
+    & h2 {
+      padding: 0;
+    }
+  }
+
+  .g-container-dataStudies {
+    align-items: normal;
   }
 }
