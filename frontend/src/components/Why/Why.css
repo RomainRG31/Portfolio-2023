@@ -71,6 +71,7 @@
     flex-direction: column;
     & p {
       text-align: center;
+      font-size: 16px;
     }
   }
 
@@ -82,14 +83,39 @@
   .faq-container {
     margin-top: 90px;
     & p {
-      font-size: 75px;
+      font-size: 20vw;
     }
   }
 
   .dropdownContent {
     padding: 0 1em;
+    font-size: 0.6em;
+
     & p {
       text-align: center;
+      font-size: 16px;
     }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .g-container-whyComponent {
+    width: 100%;
+  }
+
+  .g-container-why {
+    padding: 0 2em;
+  }
+
+  .container-content p {
+    font-size: 17px;
+  }
+
+  .dropdownContent {
+    font-size: 22px;
+  }
+
+  .faq-container p {
+    font-size: 140px;
   }
 }

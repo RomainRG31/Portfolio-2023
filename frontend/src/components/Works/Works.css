@@ -20,6 +20,7 @@
   flex-direction: column;
   align-items: flex-end;
   margin-top: 80px;
+  padding-right: 13em;
   gap: 2em;
   & h2 {
     padding-right: 1em;
@@ -83,10 +84,14 @@ h2 {
 @media screen and (max-width: 767px) {
   .works-block {
     width: 100%;
+    & p {
+      margin-left: 15px;
+    }
   }
 
   .g-container-dataWorks {
     align-items: normal;
+    padding: 0;
     & div {
       padding: 0 !important;
       align-items: flex-start;
@@ -120,5 +125,15 @@ h2 {
   .container-works-header {
     flex-direction: column-reverse;
     padding-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .h2-works {
+    width: 50%;
+  }
+
+  .g-container-dataWorks {
+    padding-right: 0;
   }
 }

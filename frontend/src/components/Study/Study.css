@@ -5,6 +5,7 @@
   padding-bottom: 5em;
   margin-top: 80px;
   gap: 2em;
+  padding-left: 15em;
   margin-top: 2em;
   & h2 {
     padding: 1em 0.5em;
@@ -24,20 +25,31 @@
 @media screen and (max-width: 767px) {
   .studies-block {
     width: 100%;
+    & p {
+      margin-left: 15px;
+    }
   }
 
   .g-container-dataStudies {
     align-items: normal;
+    padding-left: 0;
     & div {
       padding: 0 !important;
       align-items: flex-start;
     }
     & h2 {
-      padding: 0;
+      padding: 1em 0 0;
+      border-top: solid 2px #bff102;
     }
   }
 
   .g-container-dataStudies {
     align-items: normal;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .g-container-dataStudies {
+    padding-left: 0;
   }
 }

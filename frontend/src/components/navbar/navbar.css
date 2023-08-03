@@ -8,6 +8,7 @@ nav {
   margin: 4em 0 0;
   position: sticky;
   top: 0;
+  z-index: 1000;
   background-color: #1b2b1c;
   color: #bff102;
   justify-content: space-evenly;
@@ -70,7 +71,13 @@ span {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 280px) {
+  .navbar {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .menu-open ul {
     display: block;
   }
@@ -85,5 +92,8 @@ span {
 
   nav {
     margin-top: 2em;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 3em;
   }
 }

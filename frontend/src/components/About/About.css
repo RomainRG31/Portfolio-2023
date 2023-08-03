@@ -61,19 +61,16 @@ h3 {
   font-family: AzeretL;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-}
-
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 280px) and (max-width: 767px) {
   .g-container-about {
     padding: 0;
     margin-top: 30px;
   }
   .first-block {
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 0;
-    gap: 2em;
+    padding: 0 1em;
+
     & p {
       width: 40%;
       font-size: 15px;
@@ -85,15 +82,32 @@ h3 {
   }
 
   .third-block {
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 30px;
     gap: 2em;
   }
   .sentence-about-me {
     font-size: 15px;
+    justify-content: start;
+    width: 55%;
   }
 
   h3 {
-    font-size: 15px;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .g-container-about {
+    padding: 0 3em;
+  }
+
+  .first-block {
+    padding: 0;
+  }
+
+  .sentence-about-me p {
+    font-size: 20px;
   }
 }

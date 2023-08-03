@@ -76,7 +76,7 @@ a:visited {
   }
 
   .boost p {
-    font-size: 65px;
+    font-size: 18vw;
   }
 
   .social {
@@ -86,8 +86,10 @@ a:visited {
     & a {
       margin-top: 20px;
       font-size: 22px;
+      color: #bff102;
     }
     & a:visited {
+      text-decoration: #bff102;
       color: #bff102;
     }
   }
@@ -104,12 +106,30 @@ a:visited {
     margin-top: 50px;
     & a {
       font-size: 10px;
+      color: #bff102;
+      text-decoration: #bff102;
     }
     & a:visited {
+      text-decoration: #bff102;
       color: #bff102;
     }
   }
   .g-container-footer {
     margin-top: 90px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boost p {
+    font-size: 120px;
+    margin-bottom: 100px;
+  }
+
+  .boost-block {
+    flex-direction: column;
+  }
+
+  .g-container-footer {
+    padding: 2em 2em 0;
   }
 }

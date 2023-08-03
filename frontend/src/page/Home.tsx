@@ -104,7 +104,7 @@ const Home = () => {
               <div
                 key={works.year}
                 style={{
-                  paddingRight: index === 0 ? "10%" : `${(index + 1) * 15}%`,
+                  paddingRight: index === 0 ? "5%" : `${(index + 1) * 9}%`,
                 }}
               >
                 <Works
@@ -122,7 +122,7 @@ const Home = () => {
               <div
                 key={studies.year}
                 style={{
-                  paddingLeft: index === 0 ? "10%" : `${(index + 1) * 15}%`,
+                  paddingLeft: index === 0 ? "5%" : `${(index + 1) * 10}%`,
                 }}
               >
                 <Studies

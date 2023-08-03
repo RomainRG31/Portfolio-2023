@@ -19,7 +19,7 @@ export const dataWhy = [
 export const translations = {
   fr: {
     sent1: "Pourquoi devriez-vous me prendre en alternance ?",
-    sent2: "Quels sont les avantages d'embaucher une personne en contrat pro ?",
+    sent2: "Quels sont les avantages d'embaucher un contrat pro ?",
     sent3: "Comment être sûr de faire le bon choix ?",
     descr1:
       "Car je suis motivé à réussir et à aller au bout de ce que j'entreprends à travers la passion que je ressens pour ce métier. Je suis une personne de confiance, fidèle & à l'écoute. Ma curiosité et mon autonomie m'ont permis de réaliser ce portfolio. J'ai soif d'apprendre et de me former aux côtés de professionnels aguerris.",
@@ -30,7 +30,7 @@ export const translations = {
   },
   en: {
     sent1: "Why should you take me on alternanc ?",
-    sent2: "What are the advantages of hiring a person on a pro contract ?",
+    sent2: "What are the advantages of hiring a pro contract ?",
     sent3: "How can you be sure to make the right choice?",
     descr1:
       "Because I am motivated to succeed and to go to the end of what I start. I am a trustworthy, loyal and attentive person. My curiosity and my autonomy allowed me to create this portolio. I am eager to learn and train myself alongside seasoned professionals.",
