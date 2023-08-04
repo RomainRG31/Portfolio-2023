@@ -1,6 +1,5 @@
-# Bienvenue sur mon projet de portfolio 2023 !
-
-Ce projet a été construit avec ViteJS
+# Bienvenue sur mon projet de portfolio 2023 ! `Ce projet a été construit avec ViteJS
+`
 
 ## Pour initialiser le projet :
 
