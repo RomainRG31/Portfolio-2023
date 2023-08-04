@@ -5,6 +5,7 @@
 
 nav {
   display: flex;
+
   margin: 4em 0 0;
   position: sticky;
   top: 0;
@@ -35,6 +36,8 @@ nav button {
   font-family: NavFont;
   color: #bff102;
   font-size: 20px;
+  transform: none;
+  opacity: 1;
 }
 
 nav li:hover,
@@ -78,12 +81,31 @@ span {
 }
 
 @media screen and (max-width: 1024px) {
+  .menu-open {
+    background-color: #1b2b1cc6;
+    height: 100vh;
+  }
+
   .menu-open ul {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    align-items: normal;
+    margin-bottom: 50%;
+  }
+
+  .menu-open li,
+  button {
+    font-size: 1em;
+    padding: 5vh;
+    text-align: center;
   }
 
   .menu-icon {
     display: block;
+    grid-row: 1;
+    grid-column: 1;
   }
 
   .navbar:not(.menu-open) ul {
@@ -93,7 +115,19 @@ span {
   nav {
     margin-top: 2em;
     flex-direction: row-reverse;
-    justify-content: space-between;
-    padding: 0 3em;
+    padding: 0 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  & a {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .btn-projects,
+  .btn-contact,
+  .btn-works {
+    border-right: none;
   }
 }
