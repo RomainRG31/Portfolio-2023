@@ -5,6 +5,7 @@ import logo from "../../assets/img/RR-logo-portfolio.png";
 import { motion } from "framer-motion";
 import "./navbar.css";
 import { LanguageContext } from "../../LanguageContext";
+import burger from "../../assets/img/burger-menu.svg";
 
 const Navbar: React.FC = () => {
   const { toggleLanguage } = useContext(LanguageContext);
@@ -53,10 +54,7 @@ const Navbar: React.FC = () => {
         exit="closed"
         whileTap="open"
       >
-        <img
-          src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png"
-          alt="menu--v1"
-        />
+        <img src={burger} alt="menu--v1" />
       </motion.div>
       <Link to="/#Home">
         <img src={logo} className="logo" alt="Logo of Romain ROGER" />
