@@ -9,3 +9,5 @@
 ### Tapez `npm run dev` dans le dossier frontend pour lancer le serveur 
 Le projet doit s'ouvrir sur votre localhost par définis par défaut sur votre machine.
 
+# Enjoy !
+
