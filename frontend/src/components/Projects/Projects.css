@@ -20,7 +20,6 @@
 .g-container-dataProjects {
   display: flex;
   flex-direction: column;
-  align-items: end;
 }
 .order {
   color: #bff102;
