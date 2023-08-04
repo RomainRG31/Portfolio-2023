@@ -5,7 +5,6 @@
 
 nav {
   display: flex;
-
   margin: 4em 0 0;
   position: sticky;
   top: 0;
@@ -15,7 +14,7 @@ nav {
   justify-content: space-evenly;
 }
 
-nav img {
+.logo {
   object-fit: cover;
   height: 3.8em;
   width: 5em;
@@ -106,6 +105,11 @@ span {
     display: block;
     grid-row: 1;
     grid-column: 1;
+    & img {
+      border-radius: 0;
+      margin-top: 5%;
+      color: #bff102;
+    }
   }
 
   .navbar:not(.menu-open) ul {
@@ -114,9 +118,9 @@ span {
 
   nav {
     margin-top: 2em;
-    flex-direction: row-reverse;
     padding: 0 1em;
     display: grid;
+    direction: rtl;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }

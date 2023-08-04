@@ -54,14 +54,12 @@ const Navbar: React.FC = () => {
         whileTap="open"
       >
         <img
-          width="50"
-          height="50"
           src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png"
           alt="menu--v1"
         />
       </motion.div>
       <Link to="/#Home">
-        <img src={logo} alt="Logo of Romain ROGER" />
+        <img src={logo} className="logo" alt="Logo of Romain ROGER" />
       </Link>
       <motion.ul variants={ulVariants} animate={menuOpen ? "open" : "closed"}>
         <Link className="btn-projects" to="/#Projects">
