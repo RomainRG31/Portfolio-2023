@@ -13,7 +13,8 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #1b2b1c;
+  padding-bottom: 1em;
+  background-color: #1b2b1cc6;
   color: #bff102;
   justify-content: space-evenly;
 }
@@ -119,7 +120,7 @@ span {
   }
 
   .navbar:not(.menu-open) ul {
-    display: none;
+    display: none !important;
   }
 
   nav {
