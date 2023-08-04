@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
-import logo from "../../assets/img/RR-logo-portfolio.png";
 import { motion } from "framer-motion";
 import "./navbar.css";
 import { LanguageContext } from "../../LanguageContext";
 import burger from "../../assets/img/burger-menu.svg";
 
 const Navbar: React.FC = () => {
+  const logoRR = "{ [§ Romain ROGER °}";
   const { toggleLanguage } = useContext(LanguageContext);
   const { language } = useContext(LanguageContext);
   const handleLanguageToggle = () => {
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
         <img src={burger} alt="menu--v1" />
       </motion.div>
       <Link to="/#Home">
-        <img src={logo} className="logo" alt="Logo of Romain ROGER" />
+        <p className="logorr">{logoRR}</p>
       </Link>
       <motion.ul variants={ulVariants} animate={menuOpen ? "open" : "closed"}>
         <Link className="btn-projects" to="/#Projects">

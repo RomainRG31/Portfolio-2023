@@ -2,6 +2,10 @@
   font-family: NavFont;
   src: url(../../fonts/Inter-Regular.ttf) format("truetype");
 }
+@font-face {
+  font-family: LogoRr;
+  src: url(../../fonts/Rochester.ttf) format("truetype");
+}
 
 nav {
   display: flex;
@@ -14,11 +18,10 @@ nav {
   justify-content: space-evenly;
 }
 
-.logo {
-  object-fit: cover;
-  height: 3.8em;
-  width: 5em;
-  border-radius: 1em;
+.logorr {
+  font-family: logoRr;
+  margin-top: 15%;
+  font-size: 30px;
 }
 
 nav ul {
@@ -85,8 +88,11 @@ span {
     height: 100vh;
   }
 
+  .logorr {
+    font-size: 25px;
+  }
+
   .menu-open ul {
-    display: flex;
     flex-direction: column;
     grid-row: 2;
     grid-column: 1 / span 2;
@@ -123,6 +129,7 @@ span {
     direction: rtl;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    background-color: #1b2b1cc6;
   }
   & a {
     grid-row: 1;
