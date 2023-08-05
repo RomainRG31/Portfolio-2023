@@ -16,13 +16,14 @@ nav {
   padding-bottom: 1em;
   background-color: #1b2b1cc6;
   color: #bff102;
+  align-items: center;
   justify-content: space-evenly;
 }
 
 .logorr {
   font-family: logoRr;
   margin-top: 15%;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 nav ul {
@@ -38,7 +39,7 @@ nav button {
   background-color: #050505;
   font-family: NavFont;
   color: #bff102;
-  font-size: 20px;
+  font-size: 15px;
   transform: none;
   opacity: 1;
 }
@@ -90,7 +91,7 @@ span {
   }
 
   .logorr {
-    font-size: 25px;
+    font-size: 13px;
   }
 
   .menu-open ul {
@@ -127,6 +128,7 @@ span {
     margin-top: 2em;
     padding: 0 1em;
     display: grid;
+    align-items: center;
     direction: rtl;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
