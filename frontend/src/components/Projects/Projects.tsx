@@ -16,12 +16,12 @@ const Projects = ({ order, title, link }: IProjectsInfo) => {
   const controls = useAnimation();
 
   useEffect(() => {
-    const handleIntersection = (entries) => {
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
-        controls.start("visible");
+        void controls.start("visible");
       } else {
-        controls.start("hidden");
+        void controls.start("hidden");
       }
     };
 
@@ -47,8 +47,9 @@ const Projects = ({ order, title, link }: IProjectsInfo) => {
   const containerProjectsVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
-    transition: { duration: 6000 },
   };
+
+  const transition = { duration: 0.5 };
 
   return (
     <motion.div
@@ -57,6 +58,7 @@ const Projects = ({ order, title, link }: IProjectsInfo) => {
       ref={projectsRef}
       animate={controls}
       variants={containerProjectsVariants}
+      transition={transition}
       initial="hidden"
     >
       <hr />

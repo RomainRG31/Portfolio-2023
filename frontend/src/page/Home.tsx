@@ -25,12 +25,12 @@ const Home = () => {
   const controls = useAnimation();
 
   useEffect(() => {
-    const handleIntersection = (entries) => {
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
-        controls.start("visible");
+        void controls.start("visible");
       } else {
-        controls.start("hidden");
+        void controls.start("hidden");
       }
     };
 

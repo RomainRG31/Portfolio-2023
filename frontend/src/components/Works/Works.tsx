@@ -14,15 +14,14 @@ const Works = (props: IWorks & { index: number }) => {
   const controls = useAnimation();
 
   useEffect(() => {
-    const handleIntersection = (entries) => {
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
-        controls.start("visible");
+        void controls.start("visible");
       } else {
-        controls.start("hidden");
+        void controls.start("hidden");
       }
     };
-
     const options = {
       root: null,
       rootMargin: "0px",
@@ -45,8 +44,9 @@ const Works = (props: IWorks & { index: number }) => {
   const containerWorksVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 },
   };
+
+  const transition = { duration: 0.5 };
 
   return (
     <motion.div
@@ -55,6 +55,7 @@ const Works = (props: IWorks & { index: number }) => {
       ref={worksRef}
       animate={controls}
       variants={containerWorksVariants}
+      transition={transition}
       initial="hidden"
     >
       <p className="works-year">{year}</p>

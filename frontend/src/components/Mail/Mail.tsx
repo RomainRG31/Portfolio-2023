@@ -11,12 +11,12 @@ const Mail = () => {
   const controls = useAnimation();
 
   useEffect(() => {
-    const handleIntersection = (entries) => {
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
-        controls.start("visible");
+        void controls.start("visible");
       } else {
-        controls.start("hidden");
+        void controls.start("hidden");
       }
     };
 
@@ -42,14 +42,16 @@ const Mail = () => {
   const containerWorksVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 },
   };
+
+  const transition = { duration: 0.5 };
 
   return (
     <motion.div
       ref={worksRef}
       animate={controls}
       variants={containerWorksVariants}
+      transition={transition}
       initial="hidden"
       className="g-mail-block"
     >
