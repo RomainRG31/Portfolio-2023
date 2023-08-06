@@ -1,4 +1,9 @@
-export const dataStudies = [
+interface Study {
+  year: string;
+  study: string;
+}
+
+export const dataStudies: Study[] = [
   {
     year: "2023 - Today",
     study: "st1",
@@ -13,7 +18,15 @@ export const dataStudies = [
   },
 ];
 
-export const translations = {
+interface Translations {
+  [key: string]: {
+    st1: string;
+    st2: string;
+    st3: string;
+  };
+}
+
+export const translations: Translations = {
   fr: {
     st1: "Alternance Concepteur développeur d'applications, Wildcodeschool",
     st2: "Obention du diplôme de Développeur web, Openclassrooms",

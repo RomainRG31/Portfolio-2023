@@ -1,8 +1,5 @@
 import { Layout, About, Projects, Works, Why, Mail, Studies } from "../Import";
-import {
-  dataProjects,
-  translations as projectTranslations,
-} from "../utils/dataProjects";
+import { dataProjects, projectTranslations } from "../utils/dataProjects";
 import {
   dataWorks,
   translations as worksTranslations,
@@ -72,7 +69,11 @@ const Home = () => {
               <Projects
                 key={index}
                 order={infos.order}
-                title={projectTranslations[language][infos.title]}
+                title={
+                  projectTranslations[language]?.[
+                    infos.title as keyof (typeof projectTranslations)[typeof language]
+                  ] || infos.title
+                }
                 link={infos.link}
               />
             ))}
@@ -110,7 +111,13 @@ const Home = () => {
                 <Works
                   key={index}
                   year={works.year}
-                  experiences={worksTranslations[language][works.experiences]}
+                  experiences={
+                    worksTranslations[
+                      language as keyof typeof worksTranslations
+                    ]?.[
+                      works.experiences as keyof (typeof worksTranslations)["fr"]
+                    ] || ""
+                  }
                   index={0}
                 />
               </div>
@@ -128,7 +135,13 @@ const Home = () => {
                 <Studies
                   key={index}
                   year={studies.year}
-                  study={studiesTranslations[language][studies.study]}
+                  study={
+                    studiesTranslations[
+                      language as keyof typeof studiesTranslations
+                    ]?.[
+                      studies.study as keyof (typeof studiesTranslations)["fr"]
+                    ] || ""
+                  }
                   index={0}
                 />
               </div>
@@ -149,8 +162,16 @@ const Home = () => {
             <Why
               key={index}
               order={data.order}
-              sentence={whyTranslations[language][data.sentence]}
-              description={whyTranslations[language][data.description]}
+              sentence={
+                whyTranslations[language as keyof typeof whyTranslations][
+                  data.sentence as keyof (typeof whyTranslations)["fr"]
+                ]
+              }
+              description={
+                whyTranslations[language as keyof typeof whyTranslations][
+                  data.description as keyof (typeof whyTranslations)["fr"]
+                ]
+              }
             />
           ))}
         </div>

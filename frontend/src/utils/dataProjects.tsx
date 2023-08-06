@@ -1,4 +1,10 @@
-export const dataProjects = [
+interface Project {
+  order: string;
+  title: string;
+  link: string;
+}
+
+export const dataProjects: Project[] = [
   {
     order: "01 ° 05",
     title: "title1",
@@ -27,7 +33,17 @@ export const dataProjects = [
   },
 ];
 
-export const translations = {
+interface Translations {
+  [key: string]: {
+    title1: string;
+    title2: string;
+    title3: string;
+    title4: string;
+    title5: string;
+  };
+}
+
+export const projectTranslations: Translations = {
   fr: {
     title1: "CreativeCode - Éditeur de code en ligne",
     title2: "Voyage en Grèce antique - WCS",

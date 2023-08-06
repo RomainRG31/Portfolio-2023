@@ -1,4 +1,9 @@
-export const dataWorks = [
+interface Work {
+  year: string;
+  experiences: string;
+}
+
+export const dataWorks: Work[] = [
   {
     year: "2023",
     experiences: "exp1",
@@ -21,7 +26,17 @@ export const dataWorks = [
   },
 ];
 
-export const translations = {
+interface Translations {
+  [key: string]: {
+    exp1: string;
+    exp2: string;
+    exp3: string;
+    exp4: string;
+    exp5: string;
+  };
+}
+
+export const translations: Translations = {
   fr: {
     exp1: "Développeur web en alternance, 3S GESTION",
     exp2: "Responsable de travaux exceptionnels, GIMN'S",
