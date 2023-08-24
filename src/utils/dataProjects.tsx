@@ -6,29 +6,34 @@ interface Project {
 
 export const dataProjects: Project[] = [
   {
-    order: "01 ° 05",
+    order: "01 ° 06",
     title: "title1",
     link: "https://github.com/WildCodeSchool/2023-03-wns-lamarr-groupe1",
   },
   {
-    order: "02 ° 05",
+    order: "02 ° 06",
     title: "title2",
+    link: "https://bmi-calculate-chi.vercel.app/",
+  },
+  {
+    order: "03 ° 06",
+    title: "title3",
     link: "https://github.com/RomainRG31/Voyage-en-Grece-antique-WCS",
   },
   {
-    order: "03 ° 05",
-    title: "title3",
+    order: "04 ° 06",
+    title: "title4",
     link: "https://github.com/RomainRG31/Kasa",
   },
   {
-    order: "04 ° 05",
-    title: "title4",
+    order: "05 ° 06",
+    title: "title5",
     link: "https://github.com/RomainRG31/e-commerce-kanap",
   },
 
   {
-    order: "05 ° 05",
-    title: "title5",
+    order: "06 ° 06",
+    title: "title6",
     link: "https://github.com/RomainRG31/api-piiquante",
   },
 ];
@@ -40,22 +45,25 @@ interface Translations {
     title3: string;
     title4: string;
     title5: string;
+    title6: string;
   };
 }
 
 export const projectTranslations: Translations = {
   fr: {
     title1: "CreativeCode - Éditeur de code en ligne",
-    title2: "Voyage en Grèce antique - WCS",
-    title3: "Kasa - Site de location immobilière",
-    title4: "Kanap - Ecommerce",
-    title5: "Piiquante - Création d'une API REST",
+    title2: "Calculateur d'IMC",
+    title3: "Voyage en Grèce antique - WCS",
+    title4: "Kasa - Site de location immobilière",
+    title5: "Kanap - Ecommerce",
+    title6: "Piiquante - Création d'une API REST",
   },
   en: {
     title1: "CreativeCode - Online code editor",
-    title2: "Voyage to Ancient Greece - WCS",
-    title3: "Kasa - Real Estate Rental Website",
-    title4: "Kanap - Ecommerce",
-    title5: "Piiquante - Creating a REST API",
+    title2: "BMI calculator",
+    title3: "Voyage to Ancient Greece - WCS",
+    title4: "Kasa - Real Estate Rental Website",
+    title5: "Kanap - Ecommerce",
+    title6: "Piiquante - Creating a REST API",
   },
 };
