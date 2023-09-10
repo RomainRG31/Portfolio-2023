@@ -27,8 +27,8 @@ const About = () => {
       <motion.div className="first-block" variants={elementVariants}>
         <p>
           {language === "en"
-            ? "Web developer from the south of FRANCE, Toulouse. \n Passionate and motivate to learn more and more."
-            : "Développeur web du sud de la FRANCE, Toulouse. \n Passionné et motivé à apprendre chaque jour."}
+            ? "Web developer React from the south of FRANCE, Toulouse. \n Passionate and motivate to learn more and more."
+            : "Développeur web React du sud de la FRANCE, Toulouse. \n Passionné et motivé à apprendre chaque jour."}
         </p>
         <p>
           {language === "en"
