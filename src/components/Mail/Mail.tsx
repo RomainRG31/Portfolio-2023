@@ -55,21 +55,21 @@ const Mail = () => {
       initial="hidden"
       className="g-mail-block"
     >
-      <div className="mail-sentence">
-        <p>
-          {language === "en"
-            ? "Let's Get started with me. \n One click away."
-            : "Commencer avec moi. \n Un clic seulement."}
-        </p>
-        <Link to="mailto:romain32.roger@gmail.com">
+      <Link to="mailto:romain32.roger@gmail.com">
+        <div className="mail-sentence">
+          <p>
+            {language === "en"
+              ? "Let's Get started with me. \n One click away."
+              : "Commencer avec moi. \n Un clic seulement."}
+          </p>
           <img
             width="50"
             height="50"
             src="https://img.icons8.com/ios/50/new-post--v1.png"
             alt="new-post--v1"
           />
-        </Link>
-      </div>
+        </div>
+      </Link>
     </motion.div>
   );
 };
