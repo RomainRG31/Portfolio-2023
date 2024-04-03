@@ -38,14 +38,14 @@ interface Translations {
 
 export const translations: Translations = {
   fr: {
-    exp1: "Développeur web en alternance, 3S GESTION",
+    exp1: "Développeur Wordpress, 3S GESTION",
     exp2: "Responsable de travaux exceptionnels, GIMN'S",
     exp3: "Agent très qualifié de service, GIMN'S",
     exp4: "Agent de piste, Aéroport Toulouse-Blagnac",
     exp5: "Militaire du rang, 93 RAM",
   },
   en: {
-    exp1: "Work-study web developer, 3S GESTION",
+    exp1: "Wordpress Developer, 3S GESTION",
     exp2: "Responsible for exceptional works, GIMN'S",
     exp3: "Highly Qualified Service Agent, GIMN'S",
     exp4: "Ramp Agent, Toulouse-Blagnac Airport",

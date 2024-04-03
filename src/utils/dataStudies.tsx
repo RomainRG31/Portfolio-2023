@@ -5,7 +5,7 @@ interface Study {
 
 export const dataStudies: Study[] = [
   {
-    year: "2023 - Today",
+    year: "2024 - Today",
     study: "st1",
   },
   {
@@ -28,13 +28,13 @@ interface Translations {
 
 export const translations: Translations = {
   fr: {
-    st1: "Alternance Concepteur développeur d'applications, Wildcodeschool",
-    st2: "Obention du diplôme de Développeur web, Openclassrooms",
+    st1: "Développeur Web, Wildcodeschool",
+    st2: "Développeur web, Openclassrooms",
     st3: "Formation au BTS Métiers des services à l'environnement",
   },
   en: {
-    st1: "Work-study application designer developer, Wildcodeschool",
-    st2: "Obtaining the diploma of Web Developer, Openclassrooms",
+    st1: "Web Developer, Wildcodeschool",
+    st2: "Web Developer, Openclassrooms",
     st3: "BTEC Higher National Diploma training in environmental services professions",
   },
 };
