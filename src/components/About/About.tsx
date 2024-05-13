@@ -37,7 +37,7 @@ const About = () => {
         </p>
       </motion.div>
       <motion.div className="second-block" variants={elementVariants}>
-        <p>{language === "en" ? "Portfolio 2023 of*" : "Portfolio 2023 de*"}</p>
+        <p>{language === "en" ? "Portfolio 2024 of*" : "Portfolio 2024 de*"}</p>
         <p>{first_lastName}</p>
       </motion.div>
       <motion.div className="third-block" variants={elementVariants}>
