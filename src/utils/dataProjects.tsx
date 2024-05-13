@@ -6,35 +6,25 @@ interface Project {
 
 export const dataProjects: Project[] = [
   {
-    order: "01 ° 06",
+    order: "01 ° 04",
     title: "title1",
-    link: "https://github.com/WildCodeSchool/2023-03-wns-lamarr-groupe1",
+    link: "https://github.com/RomainRG31/romainspipboy",
   },
   {
-    order: "02 ° 06",
+    order: "02 ° 04",
     title: "title2",
-    link: "https://bmi-calculate-chi.vercel.app/",
+    link: "https://moovieslib.netlify.app",
   },
   {
-    order: "03 ° 06",
+    order: "03 ° 04",
     title: "title3",
-    link: "https://github.com/RomainRG31/Voyage-en-Grece-antique-WCS",
-  },
-  {
-    order: "04 ° 06",
-    title: "title4",
-    link: "https://github.com/RomainRG31/Kasa",
-  },
-  {
-    order: "05 ° 06",
-    title: "title5",
-    link: "https://github.com/RomainRG31/e-commerce-kanap",
+    link: "https://bmi-calculate-chi.vercel.app/",
   },
 
   {
-    order: "06 ° 06",
-    title: "title6",
-    link: "https://github.com/RomainRG31/api-piiquante",
+    order: "04 ° 04",
+    title: "title4",
+    link: "https://github.com/RomainRG31/Kasa",
   },
 ];
 
@@ -44,26 +34,20 @@ interface Translations {
     title2: string;
     title3: string;
     title4: string;
-    title5: string;
-    title6: string;
   };
 }
 
 export const projectTranslations: Translations = {
   fr: {
-    title1: "CreativeCode - Éditeur de code en ligne",
-    title2: "Calculateur d'IMC",
-    title3: "Voyage en Grèce antique - WCS",
+    title1: "Pipboy de Romain - Traiteur d'informations personnelles",
+    title2: "MooviesLib - Vidéothèque en ligne",
+    title3: "Calculateur d'IMC",
     title4: "Kasa - Site de location immobilière",
-    title5: "Kanap - Ecommerce",
-    title6: "Piiquante - Création d'une API REST",
   },
   en: {
-    title1: "CreativeCode - Online code editor",
-    title2: "BMI calculator",
-    title3: "Voyage to Ancient Greece - WCS",
+    title1: "Pipboy by Romain - Processor of personal information",
+    title2: "MooviesLib - Online video library",
+    title3: "BMI calculator",
     title4: "Kasa - Real Estate Rental Website",
-    title5: "Kanap - Ecommerce",
-    title6: "Piiquante - Creating a REST API",
   },
 };
