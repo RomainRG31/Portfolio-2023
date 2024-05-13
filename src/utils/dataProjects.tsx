@@ -24,7 +24,7 @@ export const dataProjects: Project[] = [
   {
     order: "04 ° 04",
     title: "title4",
-    link: "https://github.com/RomainRG31/Kasa",
+    link: "https://kasa-nu-seven.vercel.app/Home",
   },
 ];
 
