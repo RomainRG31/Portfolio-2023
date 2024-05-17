@@ -47,8 +47,8 @@ const About = () => {
         <div className="sentence-about-me">
           <p>
             {language === "en"
-              ? "With a background as a work manager in industrial cleaning and experience as a mountain gunner, I am moving towards web development, favoring the frontend with React, Typescript and Nextjs. My goal is to join a company for a work-study program, from September 26, with a schedule of 3 weeks in the company/1 week at school over 15 months. as part of my bachelor's degree in application designer and developer at Wild Code School."
-              : "Avec un fond en tant que responsable de travaux dans le nettoyage industriel et une expérience en tant qu'artilleur de montagne, je me dirige vers le développement web, privilégiant le frontend avec React, Typescript et Nextjs. Mon objectif est d'intégrer une entreprise pour une alternance, dès le 26 septembre, avec un rythme de 3 semaines en entreprise/1 semaine à l'école sur 15 mois. dans le cadre de mon bachelor de concepteur développeur d'applications à la Wild Code School."}
+              ? "With a background as a work manager in industrial cleaning and experience as a mountain gunner, I am moving towards web development, favoring the frontend with React, Typescript and Nextjs. My goal is to join a company for a work-study program, from September 26, with a schedule of 3 weeks in the company/1 week at school over 15 months as part of my bachelor's degree in application designer and developer at Wild Code School."
+              : "Avec un fond en tant que responsable de travaux dans le nettoyage industriel et une expérience en tant qu'artilleur de montagne, je me dirige vers le développement web, privilégiant le frontend avec React, Typescript et Nextjs. Mon objectif est d'intégrer une entreprise pour une alternance, dès le 26 septembre, avec un rythme de 3 semaines en entreprise/1 semaine à l'école sur 15 mois dans le cadre de mon bachelor de concepteur développeur d'applications à la Wild Code School."}
           </p>
         </div>
       </motion.div>
