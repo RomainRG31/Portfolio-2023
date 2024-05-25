@@ -95,8 +95,8 @@ const Footer = () => {
         <p>
           {" "}
           {language === "en"
-            ? "Copyright © 2023"
-            : "Droits d'auteur © 2023 "}{" "}
+            ? "Copyright © 2024"
+            : "Droits d'auteur © 2024 "}{" "}
         </p>
       </div>
     </motion.div>
