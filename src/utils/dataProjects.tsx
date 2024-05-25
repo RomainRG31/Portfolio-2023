@@ -55,7 +55,7 @@ export const projectTranslations: Translations = {
     title1: "Pipboy by Romain - Vintage Processor of personal information",
     title2: "MooviesLib - Online video library",
     title3:
-      "Happy BirthDay - Interactive guide to beer choices depending on your mood",
+      "HappyBeersDay - Interactive guide to beer choices depending on your mood",
     title4: "BMI calculator",
     title5: "Kasa - Real Estate Rental Website",
   },
