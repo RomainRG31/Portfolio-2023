@@ -22,13 +22,13 @@ export const dataProjects: Project[] = [
   },
   {
     order: "04 ° 05",
-    title: "title3",
+    title: "title4",
     link: "https://bmi-calculate-chi.vercel.app/",
   },
 
   {
     order: "05 ° 05",
-    title: "title4",
+    title: "title5",
     link: "https://kasa-nu-seven.vercel.app/Home",
   },
 ];
