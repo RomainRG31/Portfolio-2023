@@ -17,7 +17,7 @@ import { motion, useAnimation } from "framer-motion";
 import { Helmet } from "react-helmet";
 
 const Home = () => {
-  const faq = "{/faq/]";
+  const faq = "{/faq/}";
   const { language } = useContext(LanguageContext);
   const worksRef = useRef(null);
   const controls = useAnimation();
@@ -40,13 +40,15 @@ const Home = () => {
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    if (worksRef.current) {
-      observer.observe(worksRef.current);
+    const currentWorksRef = worksRef.current;
+
+    if (currentWorksRef) {
+      observer.observe(currentWorksRef);
     }
 
     return () => {
-      if (worksRef.current) {
-        observer.unobserve(worksRef.current);
+      if (currentWorksRef) {
+        observer.unobserve(currentWorksRef);
       }
     };
   }, [controls]);
