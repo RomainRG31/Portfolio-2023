@@ -14,6 +14,7 @@ import CV from "../downloads/CV_2024.pdf";
 import { LanguageContext } from "../LanguageContext";
 import { useContext, useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const faq = "{/faq/]";
@@ -57,6 +58,37 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <Helmet>
+          <meta charSet="UTF-8" />
+          <link
+            rel="icon"
+            type="image/png"
+            href="https://romainroger.vercel.app/src/assets/img/logo.png"
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <meta
+            property="og:image"
+            content="https://romainroger.vercel.app/src/assets/img/logo.png"
+          />
+          <meta property="og:url" content="https://romainroger.vercel.app" />
+          <meta
+            property="og:title"
+            content="Portfolio 2024 of Romain Gelder-Gelder"
+          />
+          <meta
+            property="og:description"
+            content="Animé par une passion pour le développement informatique, j'ai entamé une reconversion professionnelle pour me spécialiser dans le développement web, avec une préférence marquée pour l'écosystème React. Je souhaite apporter ma détermination et mon envie de monter en compétences au sein d'une équipe de spécialistes."
+          />
+          <meta
+            property="og:site_name"
+            content="Portfolio de Romain Gelder-Roger de Développeur Web 2024"
+          />
+        </Helmet>
+      </Helmet>
       <Layout>
         <About />
         <div id="Projects"></div>
