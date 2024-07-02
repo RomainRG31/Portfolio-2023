@@ -60,16 +60,9 @@ const Home = () => {
     <div>
       <Helmet>
         <meta charSet="UTF-8" />
-        <link
-          rel="icon"
-          type="image/png"
-          href="https://romainroger.vercel.app/src/assets/img/logo.png"
-        />
+        <link rel="icon" type="image/png" href="/src/assets/img/logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          property="og:image"
-          content="https://romainroger.vercel.app/src/assets/img/logo.png"
-        />
+        <meta property="og:image" content="/src/assets/img/logo.png" />
         <meta property="og:url" content="https://romainroger.vercel.app" />
         <meta
           property="og:title"
