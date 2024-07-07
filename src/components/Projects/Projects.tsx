@@ -12,10 +12,12 @@ interface IProjectsInfo {
 
 const Projects = ({ order, title, link }: IProjectsInfo) => {
   const { language } = useContext(LanguageContext);
-  const projectsRef = useRef(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
 
   useEffect(() => {
+    const node = projectsRef.current;
+
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
@@ -28,18 +30,18 @@ const Projects = ({ order, title, link }: IProjectsInfo) => {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.1, // Set this threshold value based on your preference
+      threshold: 0.1,
     };
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    if (projectsRef.current) {
-      observer.observe(projectsRef.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (projectsRef.current) {
-        observer.unobserve(projectsRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, [controls]);
