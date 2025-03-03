@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { LanguageContext } from "../../LanguageContext";
 
 const About = () => {
-  const first_lastName = "{Romain GELDER ROGER}";
+  const first_lastName = "{Romain}";
   const { language } = useContext(LanguageContext);
 
   const containerVariants = {
