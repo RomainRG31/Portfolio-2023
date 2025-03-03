@@ -27,8 +27,8 @@ const About = () => {
       <motion.div className="first-block" variants={elementVariants}>
         <p>
           {language === "en"
-            ? "Web developer React from the south of FRANCE, Toulouse. \n Passionate and motivate to learn more and more."
-            : "Développeur web React du sud de la FRANCE, Toulouse. \n Passionné et motivé à apprendre chaque jour."}
+            ? "Looking for an opportunity in the field of systems & networks. \n Passionate and motivate to learn more and more."
+            : "À la recherche d'opportunité dans le domaine des systèmes & réseaux. \n Passionné et motivé à apprendre chaque jour."}
         </p>
         <p>
           {language === "en"
@@ -37,7 +37,7 @@ const About = () => {
         </p>
       </motion.div>
       <motion.div className="second-block" variants={elementVariants}>
-        <p>{language === "en" ? "Portfolio 2024 of*" : "Portfolio 2024 de*"}</p>
+        <p>{language === "en" ? "Portfolio 2025 of*" : "Portfolio 2025 de*"}</p>
         <p>{first_lastName}</p>
       </motion.div>
       <motion.div className="third-block" variants={elementVariants}>
@@ -47,8 +47,8 @@ const About = () => {
         <div className="sentence-about-me">
           <p>
             {language === "en"
-              ? "Driven by a passion for IT development, I began my professional reconversion through web development, with a marked preference for the React ecosystem. Future student at Epitech, I want to bring my determination and my desire to improve my skills within a team of specialists."
-              : "Animé par une passion pour le développement informatique, j'ai commencé ma reconversion professionnelle par le développement web, avec une préférence marquée pour l'écosystème React. Futur étudiant à Epitech, je souhaite apporter ma détermination et mon envie de monter en compétences au sein d'une équipe de spécialistes."}
+              ? "Driven by a passion for IT development, I began my professional reconversion through web development, with a marked preference for the Javascript ecosystem. I now want to specialize in systems and network infrastructures in order to develop my expertise and progress in this field."
+              : "Animé par une passion pour l'informatique, j'ai commencé ma reconversion professionnelle par le développement web, avec une préférence marquée pour l'écosystème Javascript. Je souhaite désormais me spécialiser dans les infrastructures systèmes et réseaux afin de développer mon expertise et évoluer dans ce domaine."}
           </p>
         </div>
       </motion.div>
