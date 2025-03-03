@@ -7,7 +7,7 @@ import { LanguageContext } from "../../LanguageContext";
 import burger from "../../assets/img/burger-menu.svg";
 
 const Navbar: React.FC = () => {
-  const logoRR = "{ [ #Romain ROGER °}";
+  const logoRR = "{ [ #Romain GELDER ROGER °}";
   const { toggleLanguage } = useContext(LanguageContext);
   const { language } = useContext(LanguageContext);
   const handleLanguageToggle = () => {
