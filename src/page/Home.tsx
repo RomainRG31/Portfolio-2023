@@ -68,15 +68,12 @@ const Home = () => {
         <meta property="og:url" content="https://romainroger.vercel.app" />
         <meta
           property="og:title"
-          content="Portfolio 2024 of Romain Gelder-Gelder"
+          content="Portfolio 2025 of Romain Gelder Gelder"
         />
-        <meta
-          property="og:description"
-          content="Animé par une passion pour le développement informatique, j'ai entamé une reconversion professionnelle pour me spécialiser dans le développement web, avec une préférence marquée pour l'écosystème React. Je souhaite apporter ma détermination et mon envie de monter en compétences au sein d'une équipe de spécialistes."
-        />
+
         <meta
           property="og:site_name"
-          content="Portfolio de Romain Gelder-Roger de Développeur Web 2024"
+          content="Portfolio de Romain Gelder Roger 2025"
         />
       </Helmet>
       <Layout>
