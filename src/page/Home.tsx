@@ -10,7 +10,7 @@ import {
 } from "../utils/dataStudies";
 import { dataWhy, translations as whyTranslations } from "../utils/dataWhy";
 import { Link } from "react-router-dom";
-import CV from "../downloads/cv_airbus.pdf";
+import CV from "../downloads/cv_tech_2025.pdf";
 import { LanguageContext } from "../LanguageContext";
 import { useContext, useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
