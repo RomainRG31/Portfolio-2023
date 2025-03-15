@@ -40,14 +40,14 @@ export const translations: Translations = {
   fr: {
     exp1: "Développeur Wordpress, 3S GESTION",
     exp2: "Responsable de travaux exceptionnels, GIMN'S",
-    exp3: "Agent très qualifié de service, GIMN'S",
+    exp3: "Technicien hygiène & propreté, GIMN'S",
     exp4: "Agent de piste, Aéroport Toulouse-Blagnac",
     exp5: "Militaire du rang, 93 RAM",
   },
   en: {
     exp1: "Wordpress Developer, 3S GESTION",
     exp2: "Responsible for exceptional works, GIMN'S",
-    exp3: "Highly Qualified Service Agent, GIMN'S",
+    exp3: "Hygiene & Cleanliness Technician, GIMN'S",
     exp4: "Ramp Agent, Toulouse-Blagnac Airport",
     exp5: "Military, 93 RAM",
   },
